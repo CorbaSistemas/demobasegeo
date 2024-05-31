@@ -1,7 +1,8 @@
 # Projeto de Base Geográfica
 
 Este projeto de Base Geográfica visa gerenciar os cadastros de Continente, País, Região e Estado. 
-Foi desenvolvido utilizando tecnologias modernas e robustas, como Java 17, Docker-Compose, Spring Boot, Flyway, JUnit e PostgreSQL, seguindo a Arquitetura DDD (Domain-Driven Design). A documentação da API está disponível através do Swagger.
+Foi desenvolvido utilizando tecnologias modernas e robustas, como Java 17, Docker-Compose, Spring Boot, Flyway, JUnit e 
+PostgreSQL, seguindo a Arquitetura DDD (Domain-Driven Design). A documentação da API está disponível através do Swagger.
 
 ## Tecnologias Utilizadas
 
@@ -39,23 +40,3 @@ O projeto está estruturado de acordo com os princípios de DDD, da seguinte for
 
 O projeto utiliza Docker-Compose para configurar e iniciar o banco de dados PostgreSQL.
 
-1. **Configuração do Docker-Compose:**
-
-   Crie um arquivo `docker-compose.yml` na raiz do projeto com o seguinte conteúdo:
-
-   ```yaml
-   version: '3.8'
-   services:
-     postgres:
-       image: postgres:13
-       environment:
-         POSTGRES_DB: geographicbase
-         POSTGRES_USER: seu_usuario
-         POSTGRES_PASSWORD: sua_senha
-       ports:
-         - "5432:5432"
-       volumes:
-         - postgres_data:/var/lib/postgresql/data
-
-   volumes:
-     postgres_data:
