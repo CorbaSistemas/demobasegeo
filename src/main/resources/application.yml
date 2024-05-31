@@ -1,0 +1,18 @@
+# CONFIGURAÇÕES TESTES/DESENVOLVIMENTO
+spring:
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://localhost:5432/basegeografica
+    username: postgres
+    password: Postgres2022!
+
+server:
+  port: 2164
+  forward-headers-strategy: framework
+  servlet:
+    context-path: /
+  undertow:
+    accesslog:
+      prefix: "[DEMO]"
+  error:
+    include-message: always
